@@ -68,10 +68,9 @@ export default function HomePage() {
         </div>
         <nav className="nav-links">
           <a href="#how-it-works">How It Works</a>
-          <a href="#demo">Demo</a>
           <a href="#features">Features</a>
           <a href="#testimonials">Testimonials</a>
-          <a href="#quotas">Access</a>
+          <a href="#faq">FAQ</a>
         </nav>
         <div className="nav-cta">
           <button className="btn" type="button" onClick={revealWhatsApp}>
@@ -624,6 +623,83 @@ export default function HomePage() {
             <div className="stat-item">
               <div className="stat-value">94%</div>
               <div className="stat-label">would recommend to a friend preparing for JEE</div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section theme-stack" id="faq">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">Common Questions</p>
+              <h2>You're probably wondering...</h2>
+            </div>
+          </div>
+          <div className="faq-grid">
+            <div className="faq-item glass">
+              <div className="faq-question">"I already go to coaching. Why do I need this?"</div>
+              <div className="faq-answer">
+                Coaching gives you content and solutions. But can you solve new problems alone at 2 AM
+                before the exam? PhysiScaffold builds the independent thinking that coaching can't—because
+                a teacher with 40 students can't guide your individual reasoning on every problem. We can.
+              </div>
+            </div>
+            <div className="faq-item glass">
+              <div className="faq-question">"Can't I just use ChatGPT? It's free."</div>
+              <div className="faq-answer">
+                ChatGPT gives you answers. That's exactly the problem. It feels productive, but you're
+                outsourcing your thinking. PhysiScaffold never gives you the answer—it makes you find it.
+                That's uncomfortable, but it's the only way your brain actually learns to solve problems.
+              </div>
+            </div>
+            <div className="faq-item glass">
+              <div className="faq-question">"What if my basics are weak?"</div>
+              <div className="faq-answer">
+                Good—we'll find out exactly where. Our prerequisite checks identify gaps before you waste
+                time on problems you're not ready for. And our mistake tracking shows patterns: maybe it's
+                not "basics" but specific concepts like sign conventions or free body diagrams. We pinpoint it.
+              </div>
+            </div>
+            <div className="faq-item glass">
+              <div className="faq-question">"Why the daily limits? I want to practice more."</div>
+              <div className="faq-answer">
+                Research is clear: cramming 20 problems superficially builds less than deeply engaging with 5.
+                The limits force you to think harder on each problem instead of rushing to the next one.
+                Students who complain about limits usually aren't finishing what they start anyway.
+              </div>
+            </div>
+            <div className="faq-item glass">
+              <div className="faq-question">"How is this different from video solutions?"</div>
+              <div className="faq-answer">
+                Videos are passive—you watch someone else think. It feels like learning but it's entertainment.
+                PhysiScaffold is active—you do the thinking, with guidance. It's harder, slower, and less
+                satisfying in the moment. But it's the only method that builds actual problem-solving ability.
+              </div>
+            </div>
+            <div className="faq-item glass">
+              <div className="faq-question">"Does this work for NEET Physics too?"</div>
+              <div className="faq-answer">
+                Yes. While our problems skew toward JEE-level difficulty, the methodology works for any
+                physics exam. NEET physics requires the same conceptual clarity—you just need fewer
+                advanced mechanics problems. The thinking skills transfer completely.
+              </div>
+            </div>
+            <div className="faq-item glass">
+              <div className="faq-question">"What if it doesn't work for me?"</div>
+              <div className="faq-answer">
+                If you use PhysiScaffold consistently for 30 days and don't see improvement in your ability
+                to approach new problems independently, something is wrong. Reach out—we'll look at your
+                usage patterns and figure out what's not clicking. We're not interested in taking money
+                from students we can't help.
+              </div>
+            </div>
+            <div className="faq-item glass">
+              <div className="faq-question">"I've tried other apps. They didn't help."</div>
+              <div className="faq-answer">
+                Most "learning apps" are answer engines with better UI. They optimize for engagement, not
+                understanding. We're different because we're building for one metric: can you solve problems
+                you've never seen before? Everything else—streaks, points, badges—is distraction.
+              </div>
             </div>
           </div>
         </section>

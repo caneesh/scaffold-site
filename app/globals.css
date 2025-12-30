@@ -1291,6 +1291,39 @@ body::before {
   }
 }
 
+/* ========================================
+   FAQ
+======================================== */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.faq-item {
+  padding: 20px 24px;
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-bright);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.faq-answer {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .pages {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;

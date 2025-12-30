@@ -80,6 +80,8 @@ export default function HomePage() {
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [email, setEmail] = useState("");
+  const [waitlistStatus, setWaitlistStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   // Floating CTA, Back to Top, and scroll progress on scroll
   useEffect(() => {
@@ -103,6 +105,21 @@ export default function HomePage() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || waitlistStatus === "submitting") return;
+
+    setWaitlistStatus("submitting");
+
+    // Simulate API call - replace with actual endpoint later
+    // Example: await fetch('/api/waitlist', { method: 'POST', body: JSON.stringify({ email }) })
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // For now, just show success - wire up your backend later
+    setWaitlistStatus("success");
+    setEmail("");
   };
 
   // Scroll reveal animations
@@ -1024,31 +1041,56 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="cta glass theme-cta" id="contact">
-          <div>
-            <p className="eyebrow">Limited Access</p>
-            <h3>Every day you wait is another day of learning wrong</h3>
+        <section className="cta-section glass theme-cta" id="contact">
+          <div className="cta-content">
+            <p className="eyebrow">Join the Waitlist</p>
+            <h3>Start learning physics the right way</h3>
             <p className="lede">
-              The students who crack JEE aren't smarter—they just learned how to think earlier.
-              PhysiScaffold is in private beta. Spots are limited because real guidance takes resources.
-              Don't let another month pass wondering why your scores won't budge.
+              PhysiScaffold is in private beta. Drop your email to get early access
+              and be among the first to experience Socratic physics tutoring.
             </p>
           </div>
-          <div className="cta-side">
-            <div className="cta-actions">
-              <button className="btn" type="button" onClick={revealWhatsApp}>
-                Request early access
-              </button>
-              <a className="btn btn-ghost" href="#features">
-                Explore all features
-              </a>
-            </div>
-            {showWhatsApp ? (
-              <div className="contact-card glass">
-                <div className="label">WhatsApp</div>
-                <div className="mono">3123201715</div>
+
+          <div className="waitlist-form-container">
+            {waitlistStatus === "success" ? (
+              <div className="waitlist-success glass">
+                <div className="success-icon">✓</div>
+                <div className="success-text">
+                  <strong>You're on the list!</strong>
+                  <span>We'll reach out soon with access details.</span>
+                </div>
               </div>
-            ) : null}
+            ) : (
+              <form className="waitlist-form" onSubmit={handleWaitlistSubmit}>
+                <div className="form-row">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="waitlist-input"
+                    disabled={waitlistStatus === "submitting"}
+                  />
+                  <button
+                    type="submit"
+                    className="btn waitlist-btn"
+                    disabled={waitlistStatus === "submitting"}
+                  >
+                    {waitlistStatus === "submitting" ? "Joining..." : "Join Waitlist"}
+                  </button>
+                </div>
+                <p className="form-note">No spam. Just early access and updates.</p>
+              </form>
+            )}
+
+            <div className="alt-contact">
+              <span className="alt-divider">or reach out directly</span>
+              <button className="btn btn-ghost btn-sm" type="button" onClick={revealWhatsApp}>
+                WhatsApp
+              </button>
+              {showWhatsApp && <span className="whatsapp-number mono">3123201715</span>}
+            </div>
           </div>
         </section>
       </main>

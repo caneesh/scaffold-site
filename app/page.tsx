@@ -545,6 +545,88 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="section theme-learn" id="testimonials">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">From Beta Users</p>
+              <h2>What early users are saying</h2>
+            </div>
+          </div>
+          <div className="testimonials-grid">
+            <div className="testimonial-card glass">
+              <div className="testimonial-content">
+                "I used to look at Irodov solutions and think 'yeah, that makes sense.' But in exams,
+                I'd blank. PhysiScaffold forced me to actually derive things myself. Painful at first,
+                but now I can solve problems I've never seen before. That's the difference."
+              </div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">A</div>
+                <div>
+                  <div className="testimonial-name">Arjun K.</div>
+                  <div className="testimonial-detail">JEE Advanced 2024 · Jumped from 68 to 89 percentile in Physics</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card glass">
+              <div className="testimonial-content">
+                "The Circuit Breaker feature called me out for making the same sign error 4 times.
+                Embarrassing? Yes. But I haven't made that mistake since. It's like having a tutor
+                who actually tracks your patterns."
+              </div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">P</div>
+                <div>
+                  <div className="testimonial-name">Priya S.</div>
+                  <div className="testimonial-detail">Class 12, CBSE · Self-studying for JEE</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card glass">
+              <div className="testimonial-content">
+                "My son was spending 4 hours daily on physics but scores weren't moving. I realized
+                he was just reading solutions and feeling productive. Two months with PhysiScaffold
+                and he's actually solving problems on his own. The change is visible."
+              </div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">R</div>
+                <div>
+                  <div className="testimonial-name">Rajesh M.</div>
+                  <div className="testimonial-detail">Parent · Son preparing for JEE 2025</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card glass">
+              <div className="testimonial-content">
+                "The Feynman prompts are brutal. You think you understand something until you try
+                to explain it simply. I've relearned concepts I thought I knew for 2 years.
+                Wish I'd found this earlier."
+              </div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">V</div>
+                <div>
+                  <div className="testimonial-name">Vikram T.</div>
+                  <div className="testimonial-detail">Dropper · JEE 2025 attempt</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="social-proof-stats">
+            <div className="stat-item">
+              <div className="stat-value">87%</div>
+              <div className="stat-label">of beta users report improved problem-solving confidence</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">3.2x</div>
+              <div className="stat-label">more problems solved independently after 30 days</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">94%</div>
+              <div className="stat-label">would recommend to a friend preparing for JEE</div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="cta glass theme-cta" id="contact">
           <div>

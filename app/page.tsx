@@ -489,6 +489,122 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Comparison Table */}
+        <section className="section theme-pages scroll-reveal" id="compare">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">See The Difference</p>
+              <h2>How we compare to what you're using now</h2>
+            </div>
+          </div>
+          <div className="comparison-table-wrapper">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>
+                    <div className="competitor-header">
+                      <span className="competitor-name highlight">PhysiScaffold</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="competitor-header">
+                      <span className="competitor-name">ChatGPT</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="competitor-header">
+                      <span className="competitor-name">YouTube</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="competitor-header">
+                      <span className="competitor-name">Coaching</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="feature-name">Guides reasoning, doesn't give answers</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="partial">~</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Tracks your specific mistake patterns</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Progressive hints (5 levels)</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="partial">~</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Catches misconceptions automatically</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="partial">~</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Spaced repetition for mistakes</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Available 24/7</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Personalized to your level</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="partial">~</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="partial">~</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Forces active problem-solving</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="partial">~</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Sanity checks before submitting</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="cross">✗</span></td>
+                </tr>
+                <tr>
+                  <td className="feature-name">Builds long-term understanding</td>
+                  <td><span className="check">✓</span></td>
+                  <td><span className="cross">✗</span></td>
+                  <td><span className="partial">~</span></td>
+                  <td><span className="check">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="table-footnote">
+            <span className="check">✓</span> = Yes &nbsp;&nbsp;
+            <span className="partial">~</span> = Sometimes/Limited &nbsp;&nbsp;
+            <span className="cross">✗</span> = No
+          </p>
+        </section>
+
         {/* Features Grid */}
         <section className="section theme-analytics scroll-reveal" id="features">
           <div className="section-head">

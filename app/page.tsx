@@ -79,8 +79,9 @@ export default function HomePage() {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Floating CTA and Back to Top visibility on scroll
+  // Floating CTA, Back to Top, and scroll progress on scroll
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.getElementById("product");
@@ -90,6 +91,11 @@ export default function HomePage() {
       }
       // Show back to top after scrolling 600px
       setShowBackToTop(window.scrollY > 600);
+
+      // Calculate scroll progress
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollHeight > 0 ? (window.scrollY / scrollHeight) * 100 : 0;
+      setScrollProgress(progress);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -166,6 +172,11 @@ export default function HomePage() {
 
   return (
     <div>
+      {/* Scroll Progress Bar */}
+      <div className="scroll-progress-container">
+        <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
+      </div>
+
       <div className="bg-ornament" aria-hidden />
       <header className="nav">
         <div className="brand">

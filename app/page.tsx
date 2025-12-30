@@ -70,6 +70,7 @@ export default function HomePage() {
           <a href="#how-it-works">How It Works</a>
           <a href="#demo">Demo</a>
           <a href="#features">Features</a>
+          <a href="#testimonials">Testimonials</a>
           <a href="#quotas">Access</a>
         </nav>
         <div className="nav-cta">

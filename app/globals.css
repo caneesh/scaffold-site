@@ -1324,6 +1324,144 @@ body::before {
   }
 }
 
+/* ========================================
+   FLOATING CTA
+======================================== */
+.floating-cta {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 90;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  transition: all var(--transition);
+}
+
+.floating-cta.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.floating-cta .btn {
+  box-shadow: 0 8px 32px rgba(52, 211, 153, 0.4), 0 0 60px rgba(52, 211, 153, 0.15);
+  padding: 14px 24px;
+  font-size: 15px;
+}
+
+.floating-cta .btn:hover {
+  box-shadow: 0 12px 40px rgba(52, 211, 153, 0.5), 0 0 80px rgba(52, 211, 153, 0.2);
+}
+
+@media (max-width: 768px) {
+  .floating-cta {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .floating-cta .btn {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+======================================== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for cards inside revealed sections */
+.scroll-reveal.revealed .card,
+.scroll-reveal.revealed .testimonial-card,
+.scroll-reveal.revealed .faq-item,
+.scroll-reveal.revealed .flow-step,
+.scroll-reveal.revealed .comparison-card {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.scroll-reveal.revealed .card:nth-child(1),
+.scroll-reveal.revealed .testimonial-card:nth-child(1),
+.scroll-reveal.revealed .faq-item:nth-child(1),
+.scroll-reveal.revealed .flow-step:nth-child(1),
+.scroll-reveal.revealed .comparison-card:nth-child(1) { animation-delay: 0.1s; }
+
+.scroll-reveal.revealed .card:nth-child(2),
+.scroll-reveal.revealed .testimonial-card:nth-child(2),
+.scroll-reveal.revealed .faq-item:nth-child(2),
+.scroll-reveal.revealed .flow-step:nth-child(2),
+.scroll-reveal.revealed .comparison-card:nth-child(2) { animation-delay: 0.2s; }
+
+.scroll-reveal.revealed .card:nth-child(3),
+.scroll-reveal.revealed .testimonial-card:nth-child(3),
+.scroll-reveal.revealed .faq-item:nth-child(3),
+.scroll-reveal.revealed .flow-step:nth-child(3) { animation-delay: 0.3s; }
+
+.scroll-reveal.revealed .card:nth-child(4),
+.scroll-reveal.revealed .testimonial-card:nth-child(4),
+.scroll-reveal.revealed .faq-item:nth-child(4),
+.scroll-reveal.revealed .flow-step:nth-child(4) { animation-delay: 0.4s; }
+
+.scroll-reveal.revealed .card:nth-child(5),
+.scroll-reveal.revealed .faq-item:nth-child(5),
+.scroll-reveal.revealed .flow-step:nth-child(5) { animation-delay: 0.5s; }
+
+.scroll-reveal.revealed .card:nth-child(6),
+.scroll-reveal.revealed .faq-item:nth-child(6),
+.scroll-reveal.revealed .flow-step:nth-child(6) { animation-delay: 0.6s; }
+
+.scroll-reveal.revealed .faq-item:nth-child(7) { animation-delay: 0.7s; }
+.scroll-reveal.revealed .faq-item:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-reveal.revealed .card,
+  .scroll-reveal.revealed .testimonial-card,
+  .scroll-reveal.revealed .faq-item,
+  .scroll-reveal.revealed .flow-step,
+  .scroll-reveal.revealed .comparison-card {
+    animation: none;
+    opacity: 1;
+  }
+
+  .floating-cta {
+    transition: opacity var(--transition);
+    transform: none;
+  }
+
+  .floating-cta.visible {
+    transform: none;
+  }
+}
+
 .pages {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;

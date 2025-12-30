@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { MathSnippet } from "@/components/MathSnippet";
 
 const ConceptFlow = dynamic(() => import("@/components/ConceptFlow"), { ssr: false });
@@ -11,6 +11,42 @@ export default function HomePage() {
   const [toastActive, setToastActive] = useState(false);
   const [autosaveStatus, setAutosaveStatus] = useState<"synced" | "syncing">("synced");
   const [showWhatsApp, setShowWhatsApp] = useState(false);
+  const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+
+  // Floating CTA visibility on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById("product");
+      if (heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        setShowFloatingCTA(heroBottom < 0);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll reveal animations
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+    revealElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
@@ -193,7 +229,7 @@ export default function HomePage() {
         </section>
 
         {/* How It Works - The Complete Flow */}
-        <section className="section theme-learn" id="how-it-works">
+        <section className="section theme-learn scroll-reveal" id="how-it-works">
           <div className="section-head">
             <div>
               <p className="eyebrow">Your Journey to Mastery</p>
@@ -322,7 +358,7 @@ export default function HomePage() {
         </section>
 
         {/* What Makes It Different */}
-        <section className="section theme-core" id="difference">
+        <section className="section theme-core scroll-reveal" id="difference">
           <div className="section-head">
             <div>
               <p className="eyebrow">The Honest Truth</p>
@@ -370,7 +406,7 @@ export default function HomePage() {
         </section>
 
         {/* Features Grid */}
-        <section className="section theme-analytics" id="features">
+        <section className="section theme-analytics scroll-reveal" id="features">
           <div className="section-head">
             <div>
               <p className="eyebrow">20+ Intelligent Features</p>
@@ -497,7 +533,7 @@ export default function HomePage() {
         </section>
 
         {/* Quotas Section */}
-        <section className="section theme-access" id="quotas">
+        <section className="section theme-access scroll-reveal" id="quotas">
           <div className="section-head">
             <div>
               <p className="eyebrow">Intentional Limits</p>
@@ -518,7 +554,7 @@ export default function HomePage() {
         </section>
 
         {/* Target Audience */}
-        <section className="section theme-pages" id="audience">
+        <section className="section theme-pages scroll-reveal" id="audience">
           <div className="section-head">
             <div>
               <p className="eyebrow">Is This For You?</p>
@@ -546,7 +582,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="section theme-learn" id="testimonials">
+        <section className="section theme-learn scroll-reveal" id="testimonials">
           <div className="section-head">
             <div>
               <p className="eyebrow">From Beta Users</p>
@@ -628,7 +664,7 @@ export default function HomePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="section theme-stack" id="faq">
+        <section className="section theme-stack scroll-reveal" id="faq">
           <div className="section-head">
             <div>
               <p className="eyebrow">Common Questions</p>
@@ -753,6 +789,13 @@ export default function HomePage() {
       <div className={`shortcut-banner ${toastActive ? "active" : ""}`}>{toastMessage}</div>
       <div className={`autosave-indicator ${autosaveStatus === "syncing" ? "syncing" : ""}`}>
         {autosaveStatus === "syncing" ? "Saving..." : "Saved"}
+      </div>
+
+      {/* Floating CTA */}
+      <div className={`floating-cta ${showFloatingCTA ? "visible" : ""}`}>
+        <button className="btn" type="button" onClick={revealWhatsApp}>
+          Request early access
+        </button>
       </div>
     </div>
   );

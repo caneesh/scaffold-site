@@ -83,43 +83,43 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="hero theme-core" id="product">
           <div className="hero-copy glass">
-            <div className="eyebrow">Socratic Physics Tutor</div>
+            <div className="eyebrow">Your Personal Physics Mentor</div>
             <h1>
-              Learn to solve problems,
+              What if you never felt
               <br />
-              not just get answers.
+              stuck in physics again?
             </h1>
             <p className="lede">
-              PhysiScaffold breaks down complex physics problems into logical steps,
-              guiding your reasoning with Socratic questions and progressive hints.
-              You do the thinking. We provide the structure.
+              Every JEE topper has one thing in common: they learned to think through problems,
+              not memorize solutions. PhysiScaffold is like having a brilliant senior who never
+              gives you the answer—but makes sure you find it yourself, every single time.
             </p>
             <div className="value-props">
               <div className="value-prop">
                 <div className="value-icon">1</div>
                 <div>
                   <strong>Paste any problem</strong>
-                  <span>Text or image upload</span>
+                  <span>We break it into clear steps</span>
                 </div>
               </div>
               <div className="value-prop">
                 <div className="value-icon">2</div>
                 <div>
-                  <strong>Get a solution roadmap</strong>
-                  <span>Steps, not answers</span>
+                  <strong>Get guided, not told</strong>
+                  <span>Hints that make you think</span>
                 </div>
               </div>
               <div className="value-prop">
                 <div className="value-icon">3</div>
                 <div>
-                  <strong>Unlock hints as needed</strong>
-                  <span>5 levels of guidance</span>
+                  <strong>Build real confidence</strong>
+                  <span>Solve it yourself, for real</span>
                 </div>
               </div>
             </div>
             <div className="cta-row">
               <button className="btn" type="button" onClick={revealWhatsApp}>
-                Request access
+                Start learning the right way
               </button>
               <a className="btn btn-ghost" href="#how-it-works">
                 See how it works
@@ -196,8 +196,8 @@ export default function HomePage() {
         <section className="section theme-learn" id="how-it-works">
           <div className="section-head">
             <div>
-              <p className="eyebrow">The Complete Flow</p>
-              <h2>From problem to understanding in 6 steps</h2>
+              <p className="eyebrow">Your Journey to Mastery</p>
+              <h2>From confused to confident in one problem</h2>
             </div>
           </div>
 
@@ -205,12 +205,13 @@ export default function HomePage() {
             <div className="flow-step">
               <div className="flow-number">1</div>
               <div className="flow-content">
-                <h3>Enter Your Problem</h3>
-                <p>Paste any physics problem as text, or upload an image of a diagram.
-                   Works with mechanics, electromagnetism, thermodynamics, and more.</p>
+                <h3>Bring Any Problem</h3>
+                <p>That Irodov problem haunting you? The HC Verma question you've been avoiding?
+                   Paste it, photograph it, or pick from our library. No problem is too hard—we'll
+                   help you crack it.</p>
                 <div className="flow-detail">
-                  <span className="pill pill-ghost">Text input</span>
-                  <span className="pill pill-ghost">Image upload</span>
+                  <span className="pill pill-ghost">Text or image</span>
+                  <span className="pill pill-ghost">Handwritten solutions</span>
                   <span className="pill pill-ghost">Problem library</span>
                 </div>
               </div>
@@ -221,13 +222,14 @@ export default function HomePage() {
             <div className="flow-step">
               <div className="flow-number">2</div>
               <div className="flow-content">
-                <h3>Prerequisite Check (Optional)</h3>
-                <p>Quick 2-3 question quiz to verify you have the foundational concepts.
-                   If gaps are found, you're guided to strengthen them first.</p>
+                <h3>Know Where You Stand</h3>
+                <p>Before diving in, a quick check ensures you have the foundation. No more
+                   wasting 30 minutes only to realize you forgot a key concept. We catch gaps
+                   before they cost you time.</p>
                 <div className="flow-detail">
-                  <span className="pill pill-ghost">Concept quiz</span>
+                  <span className="pill pill-ghost">Foundation check</span>
                   <span className="pill pill-ghost">Gap detection</span>
-                  <span className="pill pill-ghost">Remediation</span>
+                  <span className="pill pill-ghost">Targeted review</span>
                 </div>
               </div>
             </div>
@@ -237,14 +239,14 @@ export default function HomePage() {
             <div className="flow-step highlight">
               <div className="flow-number">3</div>
               <div className="flow-content">
-                <h3>Get Your Solution Roadmap</h3>
-                <p>Your problem is broken into 4-6 logical milestones. Each step has a
-                   Socratic question to guide your thinking, plus a concept inventory
-                   showing relevant formulas and definitions.</p>
+                <h3>See the Path Forward</h3>
+                <p>Complex problems suddenly feel manageable. We break them into clear milestones,
+                   each with a guiding question. You always know your next step—no more staring
+                   at a blank page wondering where to start.</p>
                 <div className="flow-detail">
-                  <span className="pill">Logical milestones</span>
-                  <span className="pill">Socratic questions</span>
-                  <span className="pill">Concept reference</span>
+                  <span className="pill">Clear milestones</span>
+                  <span className="pill">Guiding questions</span>
+                  <span className="pill">Always know what's next</span>
                 </div>
               </div>
             </div>
@@ -254,29 +256,30 @@ export default function HomePage() {
             <div className="flow-step highlight">
               <div className="flow-number">4</div>
               <div className="flow-content">
-                <h3>Unlock Progressive Hints</h3>
-                <p>Stuck? Each step has 5 levels of hints, from abstract conceptual nudges
-                   to full worked solutions. Unlock only what you need.</p>
+                <h3>Get Help Without Giving Up</h3>
+                <p>Stuck? Don't jump to the solution. Our 5-level hint system gives you just enough
+                   to keep going. Most students solve it by Level 2. The satisfaction of figuring it
+                   out yourself? That's what builds real confidence.</p>
                 <div className="hint-ladder">
                   <div className="hint-level">
                     <span className="hint-label">Level 1</span>
-                    <span className="hint-desc">Concept identification - "What physics applies here?"</span>
+                    <span className="hint-desc">"What physics principle governs this?"</span>
                   </div>
                   <div className="hint-level">
                     <span className="hint-label">Level 2</span>
-                    <span className="hint-desc">Visualization - "How would you sketch this?"</span>
+                    <span className="hint-desc">"Try visualizing it this way..."</span>
                   </div>
                   <div className="hint-level">
                     <span className="hint-label">Level 3</span>
-                    <span className="hint-desc">Strategy - "What approach works best?"</span>
+                    <span className="hint-desc">"Here's the strategy that works..."</span>
                   </div>
                   <div className="hint-level">
                     <span className="hint-label">Level 4</span>
-                    <span className="hint-desc">Equations - Shows governing equations symbolically</span>
+                    <span className="hint-desc">"These are the equations you need..."</span>
                   </div>
                   <div className="hint-level">
                     <span className="hint-label">Level 5</span>
-                    <span className="hint-desc">Full solution - Complete step-by-step derivation</span>
+                    <span className="hint-desc">"Complete worked solution (last resort)"</span>
                   </div>
                 </div>
               </div>
@@ -287,14 +290,14 @@ export default function HomePage() {
             <div className="flow-step">
               <div className="flow-number">5</div>
               <div className="flow-content">
-                <h3>Sanity Check Your Answer</h3>
-                <p>Before finishing, verify your answer makes physical sense.
-                   Test limiting cases, check dimensions, and validate symmetry.
-                   Interactive debugger available if something seems off.</p>
+                <h3>Never Submit Wrong Again</h3>
+                <p>Before you finalize, our triple-check system catches errors that lose marks.
+                   Test extreme cases, verify dimensions, check symmetry. Walk into exams knowing
+                   you've built the habit of verification.</p>
                 <div className="flow-detail">
-                  <span className="pill pill-ghost">Limiting cases</span>
-                  <span className="pill pill-ghost">Dimensional analysis</span>
-                  <span className="pill pill-ghost">Interactive debugger</span>
+                  <span className="pill pill-ghost">Limit checks</span>
+                  <span className="pill pill-ghost">Dimension analysis</span>
+                  <span className="pill pill-ghost">Symmetry validation</span>
                 </div>
               </div>
             </div>
@@ -304,13 +307,14 @@ export default function HomePage() {
             <div className="flow-step">
               <div className="flow-number">6</div>
               <div className="flow-content">
-                <h3>Reflect & Build Mastery</h3>
-                <p>Explain your solution as if teaching a friend. Answer reflection questions.
-                   Then try similar variations to cement your understanding.</p>
+                <h3>Lock It In Forever</h3>
+                <p>The difference between "I solved it once" and "I'll never forget this"?
+                   Teaching it. Explain your solution like you're helping a friend. This is how
+                   concepts move from short-term memory to permanent understanding.</p>
                 <div className="flow-detail">
-                  <span className="pill pill-ghost">Explain to friend</span>
-                  <span className="pill pill-ghost">Reflection questions</span>
-                  <span className="pill pill-ghost">Problem variations</span>
+                  <span className="pill pill-ghost">Teach to learn</span>
+                  <span className="pill pill-ghost">Feynman technique</span>
+                  <span className="pill pill-ghost">Permanent retention</span>
                 </div>
               </div>
             </div>
@@ -321,8 +325,8 @@ export default function HomePage() {
         <section className="section theme-core" id="difference">
           <div className="section-head">
             <div>
-              <p className="eyebrow">Why PhysiScaffold?</p>
-              <h2>Guidance, not answers. Reasoning, not copying.</h2>
+              <p className="eyebrow">The Honest Truth</p>
+              <h2>Why most "help" actually hurts your learning</h2>
             </div>
           </div>
 
@@ -330,27 +334,27 @@ export default function HomePage() {
             <div className="comparison-card bad">
               <div className="comparison-header">
                 <span className="comparison-icon">✕</span>
-                <h4>Answer Engines</h4>
+                <h4>What You're Doing Now</h4>
               </div>
               <ul>
-                <li>Give you the answer immediately</li>
-                <li>Explain the solution step-by-step</li>
-                <li>You read passively</li>
-                <li>No retention, no learning</li>
-                <li>Creates dependency</li>
+                <li>Looking up solutions when stuck</li>
+                <li>"Understanding" while reading, forgetting by exam</li>
+                <li>Feeling like you're learning, but scores don't improve</li>
+                <li>Same mistakes, different problems</li>
+                <li>Dependent on solution manuals forever</li>
               </ul>
             </div>
             <div className="comparison-card good">
               <div className="comparison-header">
                 <span className="comparison-icon">✓</span>
-                <h4>PhysiScaffold</h4>
+                <h4>What Toppers Do</h4>
               </div>
               <ul>
-                <li>Never shows the final answer</li>
-                <li>Guides your reasoning with questions</li>
-                <li>You do the thinking</li>
-                <li>Builds neural connections</li>
-                <li>Creates independent problem-solvers</li>
+                <li>Struggle productively with guidance</li>
+                <li>Solve it themselves, even if slowly</li>
+                <li>Build permanent problem-solving circuits</li>
+                <li>Learn from mistakes systematically</li>
+                <li>Become independent thinkers</li>
               </ul>
             </div>
           </div>
@@ -358,10 +362,9 @@ export default function HomePage() {
           <div className="key-insight glass">
             <div className="insight-icon">💡</div>
             <div>
-              <strong>The key insight:</strong> PhysiScaffold uses a hidden two-pass system.
-              First, an expert engine solves the problem completely (you never see this).
-              Then, a teaching layer creates a scaffold from that solution, removing all answers
-              but preserving the logical structure. You get the roadmap, not the destination.
+              <strong>The uncomfortable truth:</strong> Reading solutions feels productive but builds nothing.
+              The brain only learns when it struggles. PhysiScaffold gives you just enough help to keep
+              struggling productively—never so much that you stop thinking. That's why it works.
             </div>
           </div>
         </section>
@@ -370,77 +373,122 @@ export default function HomePage() {
         <section className="section theme-analytics" id="features">
           <div className="section-head">
             <div>
-              <p className="eyebrow">Full Feature Set</p>
-              <h2>Everything designed for deep understanding</h2>
+              <p className="eyebrow">20+ Intelligent Features</p>
+              <h2>Built for how your brain actually learns</h2>
             </div>
           </div>
 
           <div className="feature-group">
-            <div className="feature-title">Core Problem-Solving</div>
+            <div className="feature-title">Never Get Stuck Again</div>
+            <p className="feature-subtitle">That helpless feeling when you stare at a problem for an hour? Gone.</p>
             <div className="grid cards">
-              <FeatureCard title="Solution Roadmap" tag="Core">
-                4-6 logical milestones that break complex problems into manageable steps.
-                Each step unlocks sequentially as you progress.
+              <FeatureCard title="5-Level Scaffolding" tag="Core">
+                Every problem breaks into clear steps with 5 levels of guidance—from gentle nudges
+                to full solutions. You choose how much help you need. Most solve it by Level 2.
               </FeatureCard>
-              <FeatureCard title="5-Level Hints" tag="Guidance">
-                From abstract conceptual nudges to full worked solutions.
-                Unlock only what you need, preserving the challenge.
+              <FeatureCard title="Socratic Rewind" tag="Recovery">
+                Made a wrong turn? Instead of starting over, we guide you back to where things
+                went right. Like having a mentor who says "Let's look at this together."
               </FeatureCard>
-              <FeatureCard title="Socratic Questions" tag="Reasoning">
-                Each step poses a question to guide your thinking.
-                "What physics applies?" not "Use this formula."
+              <FeatureCard title="Pre-Flight Checks" tag="Prevention">
+                Before you apply a formula, quick checks ensure you're using it correctly.
+                "Is acceleration constant?" catches mistakes before they waste your time.
               </FeatureCard>
-              <FeatureCard title="Concept Inventory" tag="Reference">
-                Expandable sidebar with definitions and formulas for
-                every concept relevant to your problem.
-              </FeatureCard>
-              <FeatureCard title="Error Warnings" tag="Prevention">
-                Common mistakes are anticipated and flagged before they happen.
-                "Watch your sign conventions" appears at the right moment.
-              </FeatureCard>
-              <FeatureCard title="Sanity Checks" tag="Validation">
-                Test limiting cases, verify dimensions, check symmetry.
-                Ensure your answer makes physical sense.
+              <FeatureCard title="Interactive Simulations" tag="Visualization">
+                Sometimes you need to see it. Adjust angles, masses, and velocities in real-time.
+                Watch physics happen before your eyes. Understanding clicks instantly.
               </FeatureCard>
             </div>
           </div>
 
           <div className="feature-group">
-            <div className="feature-title">Active Learning</div>
+            <div className="feature-title">Stop Repeating the Same Mistakes</div>
+            <p className="feature-subtitle">That sign error you keep making? The force you always forget? We track them so you can finally fix them.</p>
             <div className="grid cards">
-              <FeatureCard title="Micro-Task Mode" tag="Engagement">
-                Answer mini-questions to unlock insights. Wrong answers show explanations.
-                Duolingo-style active learning.
+              <FeatureCard title="Circuit Breaker" tag="Intervention">
+                Making the same error repeatedly? The system pauses and gives you a targeted
+                10-second drill. Fix the root cause, not just the symptom. Then continue.
               </FeatureCard>
-              <FeatureCard title="Explain to Friend" tag="Metacognition">
-                Write your explanation as if teaching someone. Get feedback on clarity,
-                accuracy, and completeness.
+              <FeatureCard title="Mistake Notebook" tag="Memory">
+                Every error becomes a flashcard. Spaced repetition ensures you see it again
+                right before you'd forget. Your weaknesses become strengths over time.
               </FeatureCard>
-              <FeatureCard title="Problem Variations" tag="Mastery">
-                Get 2-3 variations with different numbers but same physics.
-                Build fluency, not just one-time understanding.
+              <FeatureCard title="Misconception Detection" tag="Clarity">
+                "Centripetal force is a separate force"—we catch 12 major physics misconceptions
+                the moment they appear. Gentle correction before bad habits form.
               </FeatureCard>
-              <FeatureCard title="Paper Upload" tag="Handwriting">
-                Photograph your handwritten solution. Get Socratic feedback
-                focusing on one issue at a time.
+              <FeatureCard title="Constraint Collision" tag="Awareness">
+                Forgot a constraint? Added one that doesn't exist? We highlight exactly where
+                your work contradicts the problem—no more losing marks to careless reading.
               </FeatureCard>
             </div>
           </div>
 
           <div className="feature-group">
-            <div className="feature-title">Progress Tracking</div>
+            <div className="feature-title">Think Like a Physicist</div>
+            <p className="feature-subtitle">The difference between solving problems and truly understanding physics.</p>
             <div className="grid cards">
-              <FeatureCard title="Concept Network" tag="Visualization">
-                Visual graph of how physics concepts connect. See your mastery
-                level for each topic at a glance.
+              <FeatureCard title="Feynman Technique" tag="Deep Learning">
+                After solving, explain it in simple words. If you can't teach it, you don't
+                understand it. This is how IIT toppers study—and now you can too.
               </FeatureCard>
-              <FeatureCard title="Mistake Patterns" tag="Analytics">
-                Identifies recurring errors across problems. Sign slips, unit errors,
-                missing forces—tracked and addressed.
+              <FeatureCard title="Equationless Planning" tag="Strategy">
+                Before writing any math, describe your approach in words. Forces you to think
+                about physics, not just plug numbers. This habit separates top rankers.
               </FeatureCard>
-              <FeatureCard title="Problem History" tag="Continuity">
-                Auto-saves every 30 seconds. Resume exactly where you left off.
-                Full audit trail of attempts and hints.
+              <FeatureCard title="Concept Contrast" tag="Precision">
+                "Why doesn't energy conservation apply here?" Explaining what doesn't work
+                deepens understanding of what does. Master the boundaries, master the concept.
+              </FeatureCard>
+              <FeatureCard title="Boundary Case Builder" tag="Intuition">
+                What happens when the angle goes to zero? When mass becomes infinite? Testing
+                limits builds the physical intuition that makes hard problems feel obvious.
+              </FeatureCard>
+            </div>
+          </div>
+
+          <div className="feature-group">
+            <div className="feature-title">Build Unshakeable Confidence</div>
+            <p className="feature-subtitle">Know that you know—not just hope you remember.</p>
+            <div className="grid cards">
+              <FeatureCard title="Confidence Tracking" tag="Self-Awareness">
+                Rate your confidence before checking answers. Confident but wrong? That's a
+                dangerous gap we'll prioritize. Lucky guess? We'll test you again soon.
+              </FeatureCard>
+              <FeatureCard title="Sanity Check Matrix" tag="Verification">
+                Three checks before you're done: limits, symmetry, dimensions. Build the habit
+                of verification. Walk into exams knowing you catch your own errors.
+              </FeatureCard>
+              <FeatureCard title="Spot the Mistake" tag="Pattern Recognition">
+                Practice finding errors in flawed solutions. Train your eye to catch the subtle
+                sign flips and wrong assumptions that cost marks.
+              </FeatureCard>
+              <FeatureCard title="Reveal-Reconstruct-Validate" tag="Comprehension">
+                When you do read a solution, we ensure you actually understood it. No more
+                "I followed along but can't reproduce it." Prove comprehension before moving on.
+              </FeatureCard>
+            </div>
+          </div>
+
+          <div className="feature-group">
+            <div className="feature-title">Learn by Doing</div>
+            <p className="feature-subtitle">Passive reading is the illusion of learning. Active problem-solving is the reality.</p>
+            <div className="grid cards">
+              <FeatureCard title="Micro-Tasks" tag="Active Learning">
+                Every hint requires you to earn it. Answer a quick question, fill a blank,
+                explain your thinking. Your brain stays engaged, not passive.
+              </FeatureCard>
+              <FeatureCard title="FBD Canvas" tag="Visualization">
+                Draw force diagrams interactively. Place vectors, check directions, get
+                instant feedback. Like having a teacher look over your shoulder.
+              </FeatureCard>
+              <FeatureCard title="Paper Solution Upload" tag="Your Work">
+                Photograph your handwritten work. Our AI reads it, identifies the first
+                issue, and guides you forward. Your notebook, our guidance.
+              </FeatureCard>
+              <FeatureCard title="Explain to Friend" tag="Retention">
+                Summarize your solution in exactly 3 lines. This compression forces deep
+                understanding. If you can say it simply, you truly get it.
               </FeatureCard>
             </div>
           </div>
@@ -452,14 +500,15 @@ export default function HomePage() {
         <section className="section theme-access" id="quotas">
           <div className="section-head">
             <div>
-              <p className="eyebrow">Daily Limits</p>
-              <h2>Designed for focus, not overload</h2>
+              <p className="eyebrow">Intentional Limits</p>
+              <h2>Quality over quantity—like real learning</h2>
             </div>
-            <div className="badge">Resets at midnight</div>
+            <div className="badge">Resets daily</div>
           </div>
           <p className="quota-explanation">
-            Quotas encourage deep engagement with each problem.
-            These limits promote quality over quantity—real learning, not shortcuts.
+            More problems don't mean more learning. Deep engagement with fewer problems
+            builds stronger understanding than rushing through dozens. These limits ensure
+            you actually think—not just click through.
           </p>
           <div className="quota-grid glass">
             {quotas.map((q) => (
@@ -472,26 +521,26 @@ export default function HomePage() {
         <section className="section theme-pages" id="audience">
           <div className="section-head">
             <div>
-              <p className="eyebrow">Built For</p>
-              <h2>Serious physics learners</h2>
+              <p className="eyebrow">Is This For You?</p>
+              <h2>Built for students who refuse to settle</h2>
             </div>
           </div>
           <div className="grid cards">
-            <Card title="JEE/NEET Aspirants">
-              Irodov and Kleppner-level problems. Builds the conceptual rigor needed
-              for India's toughest engineering and medical entrance exams.
+            <Card title="The JEE/NEET Dreamer">
+              You know the stakes. One exam. One shot. You've seen classmates who "got it"
+              while you struggled with the same concepts. This is how you close that gap—for real.
             </Card>
-            <Card title="Self-Learners">
-              Structure your independent study. Get expert-level guidance without
-              a tutor. Work at your own pace with saved progress.
+            <Card title="The Self-Learner">
+              No coaching? No problem. PhysiScaffold is like having a brilliant IITian friend
+              available 24/7—one who never just gives you the answer, but makes sure you get it.
             </Card>
-            <Card title="Students Wanting More">
-              Go beyond classroom learning. Understand why solutions work,
-              not just how to copy them.
+            <Card title="The Frustrated Student">
+              Tired of "understanding" solutions but blanking in exams? That gap between
+              reading and doing is exactly what we fix. Finally, learning that sticks.
             </Card>
-            <Card title="Teachers & Parents">
-              Give students a tool that builds independence, not dependence.
-              Track their actual understanding, not just answer accuracy.
+            <Card title="The Concerned Parent">
+              Your child spends hours but scores don't improve? Most "help" creates dependency.
+              PhysiScaffold builds independence. Watch them become the student who helps others.
             </Card>
           </div>
         </section>
@@ -499,20 +548,21 @@ export default function HomePage() {
         {/* CTA Section */}
         <section className="cta glass theme-cta" id="contact">
           <div>
-            <p className="eyebrow">Early Access</p>
-            <h3>Ready to learn physics the right way?</h3>
+            <p className="eyebrow">Limited Access</p>
+            <h3>Every day you wait is another day of learning wrong</h3>
             <p className="lede">
-              PhysiScaffold is in private beta. Request access to be among the first
-              to experience Socratic physics tutoring that builds real understanding.
+              The students who crack JEE aren't smarter—they just learned how to think earlier.
+              PhysiScaffold is in private beta. Spots are limited because real guidance takes resources.
+              Don't let another month pass wondering why your scores won't budge.
             </p>
           </div>
           <div className="cta-side">
             <div className="cta-actions">
               <button className="btn" type="button" onClick={revealWhatsApp}>
-                Request access
+                Request early access
               </button>
-              <a className="btn btn-ghost" href="#how-it-works">
-                Review how it works
+              <a className="btn btn-ghost" href="#features">
+                Explore all features
               </a>
             </div>
             {showWhatsApp ? (
@@ -530,7 +580,7 @@ export default function HomePage() {
           <div className="logo-mark">Φ</div>
           <div>
             <div className="brand-title">PhysiScaffold</div>
-            <div className="brand-subtitle">Socratic Physics Engine</div>
+            <div className="brand-subtitle">Your Physics Thinking Partner</div>
           </div>
         </div>
         <div className="footer-links">
@@ -538,7 +588,7 @@ export default function HomePage() {
           <a href="#features">Features</a>
           <a href="#quotas">Access</a>
         </div>
-        <div className="mono">Learn to reason, not just answer.</div>
+        <div className="mono">The confidence to solve anything.</div>
       </footer>
 
       <div className={`shortcut-banner ${toastActive ? "active" : ""}`}>{toastMessage}</div>

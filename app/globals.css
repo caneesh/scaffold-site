@@ -1166,6 +1166,15 @@ body::before {
   box-shadow: 0 0 12px var(--accent-glow);
 }
 
+.feature-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
 .pages {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;

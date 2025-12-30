@@ -1,10 +1,76 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { MathSnippet } from "@/components/MathSnippet";
 
 const ConceptFlow = dynamic(() => import("@/components/ConceptFlow"), { ssr: false });
+
+// Animated Counter Component
+function AnimatedCounter({
+  end,
+  suffix = "",
+  prefix = "",
+  duration = 2000,
+  decimals = 0
+}: {
+  end: number;
+  suffix?: string;
+  prefix?: string;
+  duration?: number;
+  decimals?: number;
+}) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+
+            const startTime = performance.now();
+            const animate = (currentTime: number) => {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+
+              // Easing function: ease-out cubic
+              const easeOut = 1 - Math.pow(1 - progress, 3);
+              const currentCount = easeOut * end;
+
+              setCount(currentCount);
+
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            requestAnimationFrame(animate);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [end, duration, hasAnimated]);
+
+  const displayValue = decimals > 0
+    ? count.toFixed(decimals)
+    : Math.round(count).toString();
+
+  return (
+    <span ref={ref}>
+      {prefix}{displayValue}{suffix}
+    </span>
+  );
+}
 
 export default function HomePage() {
   const [toastMessage, setToastMessage] = useState("Shortcuts ready: N new · H history · S study path · ? help");
@@ -649,15 +715,21 @@ export default function HomePage() {
           </div>
           <div className="social-proof-stats">
             <div className="stat-item">
-              <div className="stat-value">87%</div>
+              <div className="stat-value">
+                <AnimatedCounter end={87} suffix="%" duration={2000} />
+              </div>
               <div className="stat-label">of beta users report improved problem-solving confidence</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">3.2x</div>
+              <div className="stat-value">
+                <AnimatedCounter end={3.2} suffix="x" duration={2000} decimals={1} />
+              </div>
               <div className="stat-label">more problems solved independently after 30 days</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">94%</div>
+              <div className="stat-value">
+                <AnimatedCounter end={94} suffix="%" duration={2000} />
+              </div>
               <div className="stat-label">would recommend to a friend preparing for JEE</div>
             </div>
           </div>

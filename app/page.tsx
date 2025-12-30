@@ -605,6 +605,83 @@ export default function HomePage() {
           </p>
         </section>
 
+        {/* Topic Coverage */}
+        <section className="section theme-stack scroll-reveal" id="topics">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">Complete JEE Physics Coverage</p>
+              <h2>Every chapter. Every concept. Every problem type.</h2>
+            </div>
+          </div>
+          <div className="topics-grid">
+            <div className="topic-card">
+              <div className="topic-icon">⚙️</div>
+              <div className="topic-name">Mechanics</div>
+              <div className="topic-subtopics">Kinematics, NLM, Work-Energy, Rotation, Gravitation, SHM</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+            <div className="topic-card">
+              <div className="topic-icon">⚡</div>
+              <div className="topic-name">Electrostatics</div>
+              <div className="topic-subtopics">Coulomb's Law, Electric Field, Potential, Gauss's Law, Capacitors</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+            <div className="topic-card">
+              <div className="topic-icon">🔌</div>
+              <div className="topic-name">Current Electricity</div>
+              <div className="topic-subtopics">Ohm's Law, Circuits, Kirchhoff's Laws, RC Circuits</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+            <div className="topic-card">
+              <div className="topic-icon">🧲</div>
+              <div className="topic-name">Magnetism</div>
+              <div className="topic-subtopics">Magnetic Field, Biot-Savart, Ampere's Law, EMI, AC Circuits</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+            <div className="topic-card">
+              <div className="topic-icon">🌊</div>
+              <div className="topic-name">Waves & Optics</div>
+              <div className="topic-subtopics">Wave Motion, Sound, Ray Optics, Wave Optics, Interference</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+            <div className="topic-card">
+              <div className="topic-icon">🌡️</div>
+              <div className="topic-name">Thermodynamics</div>
+              <div className="topic-subtopics">Heat Transfer, KTG, Laws of Thermodynamics, Entropy</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+            <div className="topic-card">
+              <div className="topic-icon">⚛️</div>
+              <div className="topic-name">Modern Physics</div>
+              <div className="topic-subtopics">Photoelectric Effect, Bohr Model, X-rays, Nuclear Physics</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+            <div className="topic-card">
+              <div className="topic-icon">💧</div>
+              <div className="topic-name">Fluid Mechanics</div>
+              <div className="topic-subtopics">Pressure, Buoyancy, Bernoulli's Equation, Viscosity</div>
+              <div className="topic-badge full">Full Coverage</div>
+            </div>
+          </div>
+          <div className="topics-footer glass">
+            <div className="topics-stat">
+              <div className="topics-stat-value">500+</div>
+              <div className="topics-stat-label">Problem templates</div>
+            </div>
+            <div className="topics-stat">
+              <div className="topics-stat-value">8</div>
+              <div className="topics-stat-label">Major chapters</div>
+            </div>
+            <div className="topics-stat">
+              <div className="topics-stat-value">40+</div>
+              <div className="topics-stat-label">Sub-topics</div>
+            </div>
+            <div className="topics-note">
+              Covering Irodov, HC Verma, DC Pandey, and JEE Advanced PYQs
+            </div>
+          </div>
+        </section>
+
         {/* Features Grid */}
         <section className="section theme-analytics scroll-reveal" id="features">
           <div className="section-head">

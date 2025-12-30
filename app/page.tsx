@@ -78,8 +78,9 @@ export default function HomePage() {
   const [autosaveStatus, setAutosaveStatus] = useState<"synced" | "syncing">("synced");
   const [showWhatsApp, setShowWhatsApp] = useState(false);
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
-  // Floating CTA visibility on scroll
+  // Floating CTA and Back to Top visibility on scroll
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.getElementById("product");
@@ -87,10 +88,16 @@ export default function HomePage() {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
         setShowFloatingCTA(heroBottom < 0);
       }
+      // Show back to top after scrolling 600px
+      setShowBackToTop(window.scrollY > 600);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Scroll reveal animations
   useEffect(() => {
@@ -869,6 +876,18 @@ export default function HomePage() {
           Request early access
         </button>
       </div>
+
+      {/* Back to Top Button */}
+      <button
+        className={`back-to-top ${showBackToTop ? "visible" : ""}`}
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        type="button"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M18 15l-6-6-6 6"/>
+        </svg>
+      </button>
     </div>
   );
 }

@@ -1367,6 +1367,57 @@ body::before {
 }
 
 /* ========================================
+   BACK TO TOP BUTTON
+======================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all var(--transition);
+  backdrop-filter: blur(12px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: var(--panel-hover);
+  border-color: var(--border-strong);
+  color: var(--text-bright);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.back-to-top:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 90px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ========================================
    SCROLL REVEAL ANIMATIONS
 ======================================== */
 .scroll-reveal {

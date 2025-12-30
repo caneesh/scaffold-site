@@ -1670,6 +1670,17 @@ body::before {
   color: var(--muted);
 }
 
+.form-error {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.input-error {
+  border-color: var(--danger) !important;
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.15) !important;
+}
+
 .waitlist-success {
   display: flex;
   align-items: center;

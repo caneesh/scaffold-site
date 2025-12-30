@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # misc
 *.tgz
+
+# waitlist data (keep template, ignore actual data)
+data/waitlist.json
+!data/.gitkeep

@@ -113,13 +113,26 @@ export default function HomePage() {
 
     setWaitlistStatus("submitting");
 
-    // Simulate API call - replace with actual endpoint later
-    // Example: await fetch('/api/waitlist', { method: 'POST', body: JSON.stringify({ email }) })
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      });
 
-    // For now, just show success - wire up your backend later
-    setWaitlistStatus("success");
-    setEmail("");
+      const data = await response.json();
+
+      if (response.ok) {
+        setWaitlistStatus("success");
+        setEmail("");
+      } else {
+        console.error("Waitlist error:", data.error);
+        setWaitlistStatus("error");
+      }
+    } catch (error) {
+      console.error("Waitlist error:", error);
+      setWaitlistStatus("error");
+    }
   };
 
   // Scroll reveal animations
@@ -1067,9 +1080,12 @@ export default function HomePage() {
                     type="email"
                     placeholder="Enter your email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (waitlistStatus === "error") setWaitlistStatus("idle");
+                    }}
                     required
-                    className="waitlist-input"
+                    className={`waitlist-input ${waitlistStatus === "error" ? "input-error" : ""}`}
                     disabled={waitlistStatus === "submitting"}
                   />
                   <button
@@ -1080,7 +1096,11 @@ export default function HomePage() {
                     {waitlistStatus === "submitting" ? "Joining..." : "Join Waitlist"}
                   </button>
                 </div>
-                <p className="form-note">No spam. Just early access and updates.</p>
+                {waitlistStatus === "error" ? (
+                  <p className="form-error">Something went wrong. Please try again.</p>
+                ) : (
+                  <p className="form-note">No spam. Just early access and updates.</p>
+                )}
               </form>
             )}
 

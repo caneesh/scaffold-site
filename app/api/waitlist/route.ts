@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabase } from "@/lib/supabase";
+import { generateAccessCode, sendWelcomeEmail } from "@/lib/email";
 
 export const dynamic = "force-dynamic";
 
@@ -41,10 +42,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Add new entry
+    // Generate unique access code
+    const accessCode = generateAccessCode();
+
+    // Add new entry with access code
     const { error } = await supabase.from("waitlist").insert({
       email: normalizedEmail,
-      source: "website"
+      source: "website",
+      access_code: accessCode
     });
 
     if (error) {
@@ -55,7 +60,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    console.log(`New waitlist signup: ${normalizedEmail}`);
+    // Send welcome email with access code
+    try {
+      await sendWelcomeEmail({ to: normalizedEmail, accessCode });
+
+      // Update code_sent_at timestamp
+      await supabase
+        .from("waitlist")
+        .update({ code_sent_at: new Date().toISOString() })
+        .eq("email", normalizedEmail);
+
+      console.log(`New waitlist signup: ${normalizedEmail}, code: ${accessCode}, email sent`);
+    } catch (emailError) {
+      console.error("Failed to send welcome email:", emailError);
+      // Don't fail the signup if email fails - they're still on the list
+      console.log(`New waitlist signup: ${normalizedEmail}, code: ${accessCode}, email failed`);
+    }
 
     return NextResponse.json(
       { message: "Successfully joined the waitlist!" },

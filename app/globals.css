@@ -175,6 +175,18 @@ body::before {
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .logo-img {
+    height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 48px;
+  }
+}
+
 .nav-links {
   display: flex;
   gap: 6px;

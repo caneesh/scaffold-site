@@ -169,6 +169,12 @@ body::before {
   box-shadow: 0 0 20px rgba(52, 211, 153, 0.15);
 }
 
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
 .nav-links {
   display: flex;
   gap: 6px;

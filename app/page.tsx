@@ -210,11 +210,7 @@ export default function HomePage() {
       <div className="bg-ornament" aria-hidden />
       <header className="nav">
         <div className="brand">
-          <div className="logo-mark">Φ</div>
-          <div>
-            <div className="brand-title">PhysiScaffold</div>
-            <div className="brand-subtitle">Socratic Physics Engine</div>
-          </div>
+          <img src="/logo-dark.png" alt="PhysiScaffold" className="logo-img" />
         </div>
         <nav className="nav-links">
           <a href="#how-it-works">How It Works</a>
@@ -1117,11 +1113,7 @@ export default function HomePage() {
 
       <footer className="footer">
         <div className="brand">
-          <div className="logo-mark">Φ</div>
-          <div>
-            <div className="brand-title">PhysiScaffold</div>
-            <div className="brand-subtitle">Your Physics Thinking Partner</div>
-          </div>
+          <img src="/logo-dark.png" alt="PhysiScaffold" className="logo-img" />
         </div>
         <div className="footer-links">
           <a href="#how-it-works">How It Works</a>

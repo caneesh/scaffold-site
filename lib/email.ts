@@ -16,13 +16,9 @@ function getResend(): Resend {
   return resendInstance;
 }
 
-export function generateAccessCode(): string {
-  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  let code = "PS-";
-  for (let i = 0; i < 8; i++) {
-    code += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return code;
+export function generateAccessCode(sequenceNumber: number): string {
+  const paddedNumber = String(sequenceNumber).padStart(3, "0");
+  return `PILOT-ALPHA-${paddedNumber}`;
 }
 
 interface SendWelcomeEmailParams {

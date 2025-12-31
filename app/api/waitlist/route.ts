@@ -42,8 +42,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate unique access code
-    const accessCode = generateAccessCode();
+    // Get current count to generate sequential code
+    const { count } = await supabase
+      .from("waitlist")
+      .select("*", { count: "exact", head: true });
+
+    const sequenceNumber = (count ?? 0) + 1;
+    const accessCode = generateAccessCode(sequenceNumber);
 
     // Add new entry with access code
     const { error } = await supabase.from("waitlist").insert({
